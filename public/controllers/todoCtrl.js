@@ -14,11 +14,7 @@ angular.module('app')
             });
         }
 
-        $scope.update = function(index){
-            var todo = $scope.todos[index];
-            Todos.update({id: todo._id}, todo);
-            $scope.editing[index] = false;
-        }
+
 
         $scope.edit = function(index){
             $scope.editing[index] = angular.copy($scope.todos[index]);
