@@ -25,9 +25,13 @@
         <li ng-repeat="todo in todos | filter: search">
           <input ng-show="!editing[$index]" type="checkbox" ng-model="todo.completed" ng-change="update($index)">
           <a ng-show="!editing[$index]" href="#/{{todo._id}}">{{todo.name}}</a>
+          <!-- display -->
+          <span ng-show="!editing[$index]">{{todo.Due}}</span>
           <button ng-show="!editing[$index]" ng-click="edit($index)">edit</button>
           <button ng-show="!editing[$index]" ng-click="remove($index)">remove</button>
           <input ng-show="editing[$index]" type="text" ng-model="todo.name">
+          <!-- text box due date -->
+          <input ng-show="editing[$index]" type="text" ng-model="todo.Due">
           <button ng-show="editing[$index]" ng-click="update($index)">Update</button>
           <button ng-show="editing[$index]" ng-click="cancel($index)">Cancel</button>
         </li>
