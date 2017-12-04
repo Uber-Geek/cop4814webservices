@@ -3,6 +3,17 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
+<style>
+table {
+  border-collapse: collapse;
+}
+tr { 
+  border: solid;
+  border-width: 1px 0;
+}
+</style>
+
 a {
   color: #00B7FF;
 }
+
